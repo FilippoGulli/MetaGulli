@@ -1,0 +1,9 @@
+   0  payload/java/jsp_shell_bind_tcp                          normal  No     Java JSP Command Shell, Bind TCP Inline
+   1  payload/java/jsp_shell_reverse_tcp                       normal  No     Java JSP Command Shell, Reverse TCP Inline
+   2  payload/java/meterpreter/bind_tcp                        normal  No     Java Meterpreter, Java Bind TCP Stager
+   3  payload/java/meterpreter/reverse_http                    normal  No     Java Meterpreter, Java Reverse HTTP Stager
+   4  payload/java/meterpreter/reverse_https                   normal  No     Java Meterpreter, Java Reverse HTTPS Stager
+   5  payload/java/meterpreter/reverse_tcp                     normal  No     Java Meterpreter, Java Reverse TCP Stager
+   6  payload/java/shell/bind_tcp                              normal  No     Command Shell, Java Bind TCP Stager
+   7  payload/java/shell/reverse_tcp                           normal  No     Command Shell, Java Reverse TCP Stager
+   8  payload/java/shell_reverse_tcp  
