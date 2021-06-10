@@ -90,7 +90,7 @@ def banner_pay_java(x):
     sc.line(2)
     print "5: payload/{}/meterpreter/bind_tcp ".format(x)
     sc.line(2)
-
+    
 
 
 
@@ -106,38 +106,56 @@ def plat():
         plat = "java"
         banner_pay_java(plat)
         sc.pay_banner()
-        co = input("Enter payload to use:")
-        if co > 4 or co < 1:
-            while (co > 3 or co < 1):
-                sc.clear()
-                banner_pay_java(plat)
-                sc.pay_banner()
-                co = input("Enter payload to use:")
+#        co = input("Enter payload to use:")
+ #       if co > 4 or co < 1:
+  #          while (co > 3 or co < 1):
+   #             sc.clear()
+    #            banner_pay_java(plat)
+     #           sc.pay_banner()
+      #          co = input("Enter payload to use:")
+#
+ #       lhost = raw_input(sc.l_p)
+  #      lport = raw_input(sc.p_p)
+   #     output = raw_input(o_p)
+    #    if co == 0:#meterpreter http
+     #       LURI = raw_input("Do you want to set the URI?:")
+      #      if LURI == "yes" or LURI == "YES" or LURI == "Y" or LURI == "y" or LURI == " yes" or LURI == " YES" or LURI == " Y" or LURI == " y":
+       #         LURI_VALUE = raw_input(uri)
+        #        FORMAT = raw_input(format)
+         #       create_payload_java_http(lhost, lport, output, FORMAT, LURI_VALUE)
+#
+ #           if LURI == "no" or LURI == "NO" or LURI == "N" or LURI == "n" or LURI == " no" or LURI == " NO" or LURI == " N" or LURI == " n":
+  #              FORMAT = raw_input(format)
+   #             create_payload_java_http(lhost, lport, output, FORMAT)
+#
+ #      if co == 1:#meterpreter https
+  #          LURI = raw_input("Do you want to set the URI?:")
+   #         if LURI == "yes" or LURI == "YES" or LURI == "Y" or LURI == "y" or LURI == " yes" or LURI == " YES" or LURI == " Y" or LURI == " y":
+    #            LURI_VALUE = raw_input(uri)
+     #           FORMAT = raw_input(format)
+      #          create_payload_java_https(lhost, lport, output, FORMAT, LURI_VALUE)
+#
+ #           if LURI == "no" or LURI == "NO" or LURI == "N" or LURI == "n" or LURI == " no" or LURI == " NO" or LURI == " N" or LURI == " n":
+  #              FORMAT = raw_input(format)
+   #             create_payload_java_https(lhost, lport, output, FORMAT)
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 
-        lhost = raw_input(sc.l_p)
-        lport = raw_input(sc.p_p)
-        output = raw_input(o_p)
-        if co == 0:#meterpreter http
-            LURI = raw_input("Do you want to set the URI?:")
-            if LURI == "yes" or LURI == "YES" or LURI == "Y" or LURI == "y" or LURI == " yes" or LURI == " YES" or LURI == " Y" or LURI == " y":
-                LURI_VALUE = raw_input(uri)
-                FORMAT = raw_input(format)
-                create_payload_java_http(lhost, lport, output, FORMAT, LURI_VALUE)
 
-            if LURI == "no" or LURI == "NO" or LURI == "N" or LURI == "n" or LURI == " no" or LURI == " NO" or LURI == " N" or LURI == " n":
-                FORMAT = raw_input(format)
-                create_payload_java_http(lhost, lport, output, FORMAT)
 
-        if co == 1:#meterpreter https
-            LURI = raw_input("Do you want to set the URI?:")
-            if LURI == "yes" or LURI == "YES" or LURI == "Y" or LURI == "y" or LURI == " yes" or LURI == " YES" or LURI == " Y" or LURI == " y":
-                LURI_VALUE = raw_input(uri)
-                FORMAT = raw_input(format)
-                create_payload_java_https(lhost, lport, output, FORMAT, LURI_VALUE)
 
-            if LURI == "no" or LURI == "NO" or LURI == "N" or LURI == "n" or LURI == " no" or LURI == " NO" or LURI == " N" or LURI == " n":
-                FORMAT = raw_input(format)
-                create_payload_java_https(lhost, lport, output, FORMAT)
+
+
+
 
 
 
@@ -155,3 +173,15 @@ oses = ("java", "python", "php", "osx")
 uri = colored("ENTER the uri:", "red")
 format = colored("ENTER the format of the file:", "red")
 o_p = colored("Enter the path of the output file(including the extension .jar):", "red")
+my_ip = urlopen('http://ip.42.pl/raw').read()
+
+
+
+#uncommon payloads for platforms
+#i have all the payloads separated using lines, then a delimiter, if encountered we have to change the type of payload
+#we read the payloads from file payloads text file
+
+payloads = open("payloads", "r")
+
+#using readline() we can read the line, with .append() we can add
+
